@@ -57,6 +57,12 @@ func main() {
 	r.Use(middleware.Recoverer(logger))
 	r.Use(middleware.RequestLogger(logger))
 
+	// Health check para Docker / orquestradores
+	r.Get("/healthz", func(w http.ResponseWriter, r *http.Request) {
+		w.WriteHeader(http.StatusOK)
+		w.Write([]byte("ok"))
+	})
+
 	// Endpoint de redirecionamento público (sem autenticação)
 	r.Get("/{id}", h.RedirectURL)
 

@@ -17,7 +17,9 @@ func APIKeyAuth(apiKey string) func(http.Handler) http.Handler {
 			}
 			key := r.Header.Get("X-API-Key")
 			if key != apiKey {
-				http.Error(w, `{"error":{"code":"UNAUTHORIZED","message":"Invalid or missing API key"}}`, http.StatusUnauthorized)
+				w.Header().Set("Content-Type", "application/json")
+				w.WriteHeader(http.StatusUnauthorized)
+				w.Write([]byte(`{"error":{"code":"UNAUTHORIZED","message":"Invalid or missing API key"}}`))
 				return
 			}
 			next.ServeHTTP(w, r)
