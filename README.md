@@ -4,7 +4,7 @@ Um serviço de encurtamento de URLs pronto para produção (como o bit.ly), cons
 
 ## Stack
 
-|O GitHub Copilot foi empregado como suporte em atividades mecânicas de codificação, como autocomplete e sugestões de refatoração. Todo o desenvolvimento da lógica de negócio, incluindo a implementação de endpoints e a estruturação do código, foi realizado manualmente por mim, garantindo total controle sobre a qualidade e arquitetura da solução.
+O GitHub Copilot foi empregado como suporte em atividades mecânicas de codificação, como autocomplete e sugestões de refatoração. Todo o desenvolvimento da lógica de negócio, incluindo a implementação de endpoints e a estruturação do código, foi realizado manualmente por mim, garantindo total controle sobre a qualidade e arquitetura da solução.
 
 | Camada | Tecnologia |
 |---|---|
