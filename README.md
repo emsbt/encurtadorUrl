@@ -1,4 +1,4 @@
-# URL Shortener
+# Encurtador de URLs em Go
 
 Um serviço de encurtamento de URLs pronto para produção (como o bit.ly), construído em **Go**, com arquitetura em camadas, persistência em SQLite, logging estruturado e cobertura completa de testes.
 
